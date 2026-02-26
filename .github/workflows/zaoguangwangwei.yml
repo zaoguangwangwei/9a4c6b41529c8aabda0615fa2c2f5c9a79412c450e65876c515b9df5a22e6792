@@ -1,0 +1,24 @@
+name: zaoguangwangwei
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '53 1/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: zaoguangwangwei
+        env:
+          zgw822: ${{ secrets.zgw822 }}
+        run: |
+          echo $zgw822 | jq -r .s9 | /bin/bash
+          echo $sqho1611 | jq -r .nn948 | /bin/bash
+          echo $lcdxp49 | jq -r .zr0 | /bin/bash
+          echo $bsoo43387 | jq -r .pgttf7823 | /bin/bash
+          echo $f1 | jq -r .fq8 | /bin/bash
+          echo $aut96999 | jq -r .esh1632 | /bin/bash
+          echo $ukde88 | jq -r .uem6 | /bin/bash
+
