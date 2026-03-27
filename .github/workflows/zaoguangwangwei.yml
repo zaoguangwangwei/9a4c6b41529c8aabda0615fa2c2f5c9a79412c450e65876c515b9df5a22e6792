@@ -1,24 +1,28 @@
 name: zaoguangwangwei
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '53 1/6 * * *'
 
-jobs:  # 8256
+  schedule:
+    - cron: '26 0,6,12,18 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: zaoguangwangwei
         env:
-          zgw822: ${{ secrets.zgw822 }}
+          g81931: ${{ secrets.g81931 }}
         run: |
-          echo $zgw822 | jq -r .s9 | /bin/bash
-          echo $sqho1611 | jq -r .nn948 | /bin/bash
-          echo $lcdxp49 | jq -r .zr0 | /bin/bash
-          echo $bsoo43387 | jq -r .pgttf7823 | /bin/bash
-          echo $f1 | jq -r .fq8 | /bin/bash
-          echo $aut96999 | jq -r .esh1632 | /bin/bash
-          echo $ukde88 | jq -r .uem6 | /bin/bash
+          printf '%s' "$g81931" | jq -r .hfggy9 | /bin/bash
+          printf '%s' "$xv0726" | jq -r .bjdzf1 | /bin/bash
+          printf '%s' "$s24" | jq -r .p397 | /bin/bash
+          echo $gjc82194 | jq -r .qubut31635 | /bin/bash
+          echo $lgsem5 | jq -r .wq51110 | /bin/bash
+          printf '%s' "$mmp673" | jq -r .w03364 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 70QjwC27
+          path: "*.zip"
+          retention-days: 1
